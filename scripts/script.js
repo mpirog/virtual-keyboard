@@ -3,6 +3,8 @@ import {rows, dataKeys} from './data.js'
 let leng = 'en'
 
 let isActiveCapsLock = false
+let isActiveShift = false
+let isActiveShiftForce = false
 
 const buttons = []
 const mainTextElems = []
@@ -84,11 +86,9 @@ rows.forEach(row => {
     wrapper.append(createRow(row))
 })
 
-const changeUpperCase = () => {
-    isActiveCapsLock = !isActiveCapsLock
-
+const changeUpperCase = (toUpper) => {
     mainTextElems.forEach(elem => {
-        elem.innerHTML = isActiveCapsLock ? elem.innerHTML.toUpperCase() : elem.innerHTML.toLowerCase()
+        elem.innerHTML = toUpper ? elem.innerHTML.toUpperCase() : elem.innerHTML.toLowerCase()
     })
 }
 
@@ -96,7 +96,9 @@ buttons.forEach(btn => {
     btn.addEventListener('mousedown', event => {
         buttons.forEach(el => {
             if (el.getAttribute('data-type') !== 'CapsLock') {
-                el.classList.remove('button__active')
+                if (!isActiveShiftForce) {
+                    el.classList.remove('button__active')
+                }
             }
         })
 
@@ -107,12 +109,26 @@ buttons.forEach(btn => {
         let text = dataKeys[type][leng].value
 
         if (type === 'CapsLock') {
-            changeUpperCase()
+            isActiveCapsLock = !isActiveCapsLock
         }
 
-        if (isActiveCapsLock) {
+        if (type === 'ShiftLeft' || type === 'ShiftRight') {
+            isActiveShift = isActiveShiftForce ? isActiveShiftForce : !isActiveShiftForce
+        }
+
+        if (isActiveShift && dataKeys[type][leng].additionalValue) {
+            text = dataKeys[type][leng].additionalValue
+        }
+
+        if ((isActiveShift && !isActiveCapsLock) || (!isActiveShift && isActiveCapsLock)) {
             text = text.toUpperCase()
         }
+
+        if (type !== 'ShiftLeft' && type !== 'ShiftRight') {
+            isActiveShift = isActiveShiftForce ? isActiveShiftForce : false
+        }
+
+        changeUpperCase((isActiveShift && !isActiveCapsLock) || (!isActiveShift && isActiveCapsLock))
 
         let start = textAria.selectionStart - (type === 'Backspace' ? 1 : 0)
         
@@ -132,13 +148,18 @@ buttons.forEach(btn => {
     })
 
     btn.addEventListener('mouseup', event => {
-        if (
-            event.currentTarget.getAttribute('data-type') !== 'CapsLock'
-            && event.currentTarget.getAttribute('data-type') !== 'ShiftLeft'
-            && event.currentTarget.getAttribute('data-type') !== 'ShiftRight'
-        ) {
+        if (event.currentTarget.getAttribute('data-type') !== 'CapsLock') {
             event.currentTarget.classList.remove('button__active')
         }
+
+        if (
+            event.currentTarget.getAttribute('data-type') === 'ShiftLeft'
+            || event.currentTarget.getAttribute('data-type') === 'ShiftRight'
+        ) {
+            isActiveShift = isActiveShiftForce ? isActiveShiftForce : false
+        }
+
+        changeUpperCase((isActiveShift && !isActiveCapsLock) || (!isActiveShift && isActiveCapsLock))
 
         textAria.focus();
     })
@@ -152,11 +173,13 @@ document.addEventListener('keydown', function(event) {
         return
     }
 
-    if (!dataKeys[event.code].isOptinal) {
-        event.preventDefault()
+    event.preventDefault()
+
+    if (event.code === 'ShiftRight' || event.code === 'ShiftLeft') {
+        isActiveShiftForce = true
     }
 
-    const btn = document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mousedown'))
+    document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mousedown'))
 });
 
 document.addEventListener('keyup', function(event) {
@@ -164,9 +187,11 @@ document.addEventListener('keyup', function(event) {
         return
     } 
 
-    if (!dataKeys[event.code].isOptinal) {
-        event.preventDefault()
+    event.preventDefault()
+
+    if (event.code === 'ShiftRight' || event.code === 'ShiftLeft') {
+        isActiveShiftForce = false
     }
     
-    const btn = document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mouseup'))
+    document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mouseup'))
 });
