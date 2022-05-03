@@ -34,6 +34,11 @@ const dataKeys = {
             desc: '2',
             value: '2',
             additionalValue: '@',
+        },
+        ru: {
+            desc: '2',
+            value: '2',
+            additionalValue: '"',
         }
     },
     'Digit3': {
@@ -42,6 +47,11 @@ const dataKeys = {
             desc: '3',
             value: '3',
             additionalValue: '#',
+        },
+        ru: {
+            desc: '3',
+            value: '3',
+            additionalValue: '№',
         }
     },
     'Digit4': {
@@ -50,11 +60,21 @@ const dataKeys = {
             desc: '4',
             value: '4',
             additionalValue: '$',
+        },
+        ru: {
+            desc: '4',
+            value: '5',
+            additionalValue: ';',
         }
     },
     'Digit5': {
         isAlfabet: true,
         en: {
+            desc: '5',
+            value: '5',
+            additionalValue: '%',
+        },
+        ru: {
             desc: '5',
             value: '5',
             additionalValue: '%',
@@ -66,6 +86,11 @@ const dataKeys = {
             desc: '6',
             value: '6',
             additionalValue: '^',
+        },
+        ru: {
+            desc: '6',
+            value: '6',
+            additionalValue: ':',
         }
     },
     'Digit7': {
@@ -74,11 +99,21 @@ const dataKeys = {
             desc: '7',
             value: '7',
             additionalValue: '&',
+        },
+        ru: {
+            desc: '7',
+            value: '7',
+            additionalValue: '?',
         }
     },
     'Digit8': {
         isAlfabet: true,
         en: {
+            desc: '8',
+            value: '8',
+            additionalValue: '*',
+        },
+        ru: {
             desc: '8',
             value: '8',
             additionalValue: '*',
@@ -90,11 +125,21 @@ const dataKeys = {
             desc: '9',
             value: '9',
             additionalValue: '(',
+        },
+        ru: {
+            desc: '9',
+            value: '9',
+            additionalValue: '(',
         }
     },
     'Digit0': {
         isAlfabet: true,
         en: {
+            desc: '0',
+            value: '0',
+            additionalValue: ')',
+        },
+        ru: {
             desc: '0',
             value: '0',
             additionalValue: ')',
@@ -106,6 +151,11 @@ const dataKeys = {
             desc: '-',
             value: '-',
             additionalValue: '_',
+        },
+        ru: {
+            desc: '-',
+            value: '-',
+            additionalValue: '_',
         }
     },
     'Equal': {
@@ -114,11 +164,20 @@ const dataKeys = {
             desc: '=',
             value: '=',
             additionalValue: '+',
+        },
+        ru: {
+            desc: '=',
+            value: '=',
+            additionalValue: '+',
         }
     },
     'Backspace': {
         width: '100px',
         en: {
+            desc: '&#8592;',
+            value: '',
+        },
+        ru: {
             desc: '&#8592;',
             value: '',
         }
@@ -130,6 +189,10 @@ const dataKeys = {
         en: {
             desc: 'TAB',
             value: '    ',
+        },
+        ru: {
+            desc: 'TAB',
+            value: '    ',
         }
     },
     'KeyQ': {
@@ -137,6 +200,10 @@ const dataKeys = {
         en: {
             desc: 'q',
             value: 'q',
+        },
+        ru: {
+            desc: 'й',
+            value: 'й',
         }
     }, 
     'KeyW': {
@@ -144,6 +211,10 @@ const dataKeys = {
         en: {
             desc: 'w',
             value: 'w',
+        },
+        ru: {
+            desc: 'ц',
+            value: 'ц',
         }
     }, 
     'KeyE': {
@@ -151,6 +222,10 @@ const dataKeys = {
         en: {
             desc: 'e',
             value: 'e',
+        },
+        ru: {
+            desc: 'у',
+            value: 'у',
         }
     }, 
     'KeyR': {
@@ -158,6 +233,10 @@ const dataKeys = {
         en: {
             desc: 'r',
             value: 'r',
+        },
+        ru: {
+            desc: 'к',
+            value: 'к',
         }
     }, 
     'KeyT': {
@@ -165,6 +244,10 @@ const dataKeys = {
         en: {
             desc: 't',
             value: 't',
+        },
+        ru: {
+            desc: 'е',
+            value: 'е',
         }
     }, 
     'KeyY': {
@@ -172,6 +255,10 @@ const dataKeys = {
         en: {
             desc: 'y',
             value: 'y',
+        },
+        ru: {
+            desc: 'н',
+            value: 'н',
         }
     }, 
     'KeyU': {
@@ -179,6 +266,10 @@ const dataKeys = {
         en: {
             desc: 'u',
             value: 'u',
+        },
+        ru: {
+            desc: 'г',
+            value: 'г',
         }
     }, 
     'KeyI': {
@@ -186,6 +277,10 @@ const dataKeys = {
         en: {
             desc: 'i',
             value: 'i',
+        },
+        ru: {
+            desc: 'ш',
+            value: 'ш',
         }
     }, 
     'KeyO': {
@@ -193,6 +288,10 @@ const dataKeys = {
         en: {
             desc: 'o',
             value: 'o',
+        },
+        ru: {
+            desc: 'щ',
+            value: 'щ',
         }
     }, 
     'KeyP': {
@@ -200,6 +299,10 @@ const dataKeys = {
         en: {
             desc: 'p',
             value: 'p',
+        },
+        ru: {
+            desc: 'з',
+            value: 'з',
         }
     }, 
     'BracketLeft': {
@@ -208,6 +311,10 @@ const dataKeys = {
             desc: '[',
             value: '[',
             additionalValue: '{',
+        },
+        ru: {
+            desc: 'х',
+            value: 'х',
         }
     }, 
     'BracketRight': {
@@ -216,6 +323,10 @@ const dataKeys = {
             desc: ']',
             value: ']',
             additionalValue: '}',
+        },
+        ru: {
+            desc: 'ъ',
+            value: 'ъ',
         }
     }, 
     'Backslash': {
@@ -224,6 +335,10 @@ const dataKeys = {
             desc: '\\',
             value: '\\',
             additionalValue: '|',
+        },
+        ru: {
+            desc: '/',
+            value: '/',
         }
     },
     
@@ -234,6 +349,10 @@ const dataKeys = {
         en: {
             desc: 'Caps Lock',
             value: '',
+        },
+        ru: {
+            desc: 'Caps Lock',
+            value: '',
         }
     }, 
     'KeyA': {
@@ -241,6 +360,10 @@ const dataKeys = {
         en: {
             desc: 'a',
             value: 'a',
+        },
+        ru: {
+            desc: 'ф',
+            value: 'ф',
         }
     }, 
     'KeyS': {
@@ -248,6 +371,10 @@ const dataKeys = {
         en: {
             desc: 's',
             value: 's',
+        },
+        ru: {
+            desc: 'ы',
+            value: 'ы',
         }
     }, 
     'KeyD': {
@@ -255,6 +382,10 @@ const dataKeys = {
         en: {
             desc: 'd',
             value: 'd',
+        },
+        ru: {
+            desc: 'в',
+            value: 'в',
         }
     }, 
     'KeyF': {
@@ -262,6 +393,10 @@ const dataKeys = {
         en: {
             desc: 'f',
             value: 'f',
+        },
+        ru: {
+            desc: 'а',
+            value: 'а',
         }
     }, 
     'KeyG': {
@@ -269,6 +404,10 @@ const dataKeys = {
         en: {
             desc: 'g',
             value: 'g',
+        },
+        ru: {
+            desc: 'п',
+            value: 'п',
         }
     }, 
     'KeyH': {
@@ -276,6 +415,10 @@ const dataKeys = {
         en: {
             desc: 'h',
             value: 'h',
+        },
+        ru: {
+            desc: 'р',
+            value: 'р',
         }
     }, 
     'KeyJ': {
@@ -283,6 +426,10 @@ const dataKeys = {
         en: {
             desc: 'j',
             value: 'j',
+        },
+        ru: {
+            desc: 'о',
+            value: 'о',
         }
     }, 
     'KeyK': {
@@ -290,6 +437,10 @@ const dataKeys = {
         en: {
             desc: 'k',
             value: 'k',
+        },
+        ru: {
+            desc: 'л',
+            value: 'л',
         }
     }, 
     'KeyL': {
@@ -297,6 +448,10 @@ const dataKeys = {
         en: {
             desc: 'l',
             value: 'l',
+        },
+        ru: {
+            desc: 'д',
+            value: 'д',
         }
     }, 
     'Semicolon': {
@@ -304,6 +459,11 @@ const dataKeys = {
         en: {
             desc: ';',
             value: ';',
+            additionalValue: ':',
+        },
+        ru: {
+            desc: 'ж',
+            value: 'ж',
         }
     }, 
     'Quote': {
@@ -312,11 +472,19 @@ const dataKeys = {
             desc: '\'',
             value: '\'',
             additionalValue: '"',
+        },
+        ru: {
+            desc: 'э',
+            value: 'э',
         }
     }, 
     'Enter': {
         width: '150px',
         en: {
+            desc: 'Enter',
+            value: "\r\n",
+        },
+        ru: {
             desc: 'Enter',
             value: "\r\n",
         }
@@ -330,6 +498,10 @@ const dataKeys = {
         en: {
             desc: 'Shift',
             value: '',
+        },
+        ru: {
+            desc: 'Shift',
+            value: '',
         }
     }, 
     'KeyZ': {
@@ -337,6 +509,10 @@ const dataKeys = {
         en: {
             desc: 'z',
             value: 'z',
+        },
+        ru: {
+            desc: 'я',
+            value: 'я',
         }
     }, 
     'KeyX': {
@@ -344,6 +520,10 @@ const dataKeys = {
         en: {
             desc: 'x',
             value: 'x',
+        },
+        ru: {
+            desc: 'ч',
+            value: 'ч',
         }
     }, 
     'KeyC': {
@@ -351,6 +531,10 @@ const dataKeys = {
         en: {
             desc: 'c',
             value: 'c',
+        },
+        ru: {
+            desc: 'с',
+            value: 'с',
         }
     }, 
     'KeyV': {
@@ -358,6 +542,10 @@ const dataKeys = {
         en: {
             desc: 'v',
             value: 'v',
+        },
+        ru: {
+            desc: 'м',
+            value: 'м',
         }
     }, 
     'KeyB': {
@@ -365,6 +553,10 @@ const dataKeys = {
         en: {
             desc: 'b',
             value: 'b',
+        },
+        ru: {
+            desc: 'и',
+            value: 'и',
         }
     }, 
     'KeyN': {
@@ -372,6 +564,10 @@ const dataKeys = {
         en: {
             desc: 'n',
             value: 'n',
+        },
+        ru: {
+            desc: 'т',
+            value: 'т',
         }
     }, 
     'KeyM': {
@@ -379,6 +575,10 @@ const dataKeys = {
         en: {
             desc: 'm',
             value: 'm',
+        },
+        ru: {
+            desc: 'ь',
+            value: 'ь',
         }
     }, 
     'Comma': {
@@ -387,6 +587,10 @@ const dataKeys = {
             desc: ',',
             value: ',',
             additionalValue: '<',
+        },
+        ru: {
+            desc: 'б',
+            value: 'б',
         }
     }, 
     'Period': {
@@ -395,6 +599,10 @@ const dataKeys = {
             desc: '.',
             value: '.',
             additionalValue: '>',
+        },
+        ru: {
+            desc: 'ю',
+            value: 'ю',
         }
     }, 
     'Slash': {
@@ -403,12 +611,21 @@ const dataKeys = {
             desc: '/',
             value: '/',
             additionalValue: '?',
+        },
+        ru: {
+            desc: '.',
+            value: '.',
+            additionalValue: ',',
         }
     }, 
     'ShiftRight': {
         width: '100px',
         isOptinal: true,
         en: {
+            desc: 'Shift',
+            value: '',
+        },
+        ru: {
             desc: 'Shift',
             value: '',
         }
@@ -420,6 +637,10 @@ const dataKeys = {
         en: {
             desc: 'CTRL',
             value: '',
+        },
+        ru: {
+            desc: 'CTRL',
+            value: '',
         }
     }, 
     'MetaLeft': {
@@ -427,11 +648,19 @@ const dataKeys = {
         en: {
             desc: 'Win',
             value: '',
+        },
+        ru: {
+            desc: 'Win',
+            value: '',
         }
     }, 
     'AltLeft': {
         isOptinal: true,
         en: {
+            desc: 'ALT',
+            value: '',
+        },
+        ru: {
             desc: 'ALT',
             value: '',
         }
@@ -442,6 +671,10 @@ const dataKeys = {
         en: {
             desc: '________________',
             value: ' ',
+        },
+        ru: {
+            desc: '________________',
+            value: ' ',
         }
     }, 
     'AltRight': {
@@ -449,11 +682,19 @@ const dataKeys = {
         en: {
             desc: 'ALT',
             value: '',
+        },
+        ru: {
+            desc: 'ALT',
+            value: '',
         }
     }, 
     'ControlRight': {
         isOptinal: true,
         en: {
+            desc: 'CTRL',
+            value: '',
+        },
+        ru: {
             desc: 'CTRL',
             value: '',
         }
