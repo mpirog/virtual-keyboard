@@ -71,6 +71,10 @@ body .wrapper .row {
   transition: 1s;
 }
 
+.button__alfabet {
+  background-color: rgba(0, 0, 0, 0.678);
+}
+
 .button .text {
   position: relative;
   padding: 0px 10px;

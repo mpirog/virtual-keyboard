@@ -2,7 +2,10 @@ import {rows, dataKeys} from './data.js'
 
 let leng = 'en'
 
+let isActiveCapsLock = false
+
 const buttons = []
+const mainTextElems = []
 
 const body = document.querySelector('body')
 
@@ -16,17 +19,27 @@ const createButton = (type) => {
         btn.style.minWidth = dataKeys[type].width
     }
 
-    if (dataKeys[type][leng].isAddition) {
+    if (dataKeys[type].isAlfabet) {
+        btn.classList.add('button__alfabet')
+    }
+
+    if (dataKeys[type][leng].additionalValue) {
         const textAddition = document.createElement('div')
         textAddition.classList.add('text')
         textAddition.classList.add('text__addition')
-        textAddition.innerHTML = dataKeys[type][leng].upper
+        textAddition.innerHTML = dataKeys[type][leng].additionalValue
         btn.append(textAddition)
     }
 
     const text = document.createElement('div')
     text.classList.add('text')
+    
     text.innerHTML = dataKeys[type][leng].desc
+
+    if (dataKeys[type].isAlfabet) {
+        mainTextElems.push(text)
+    }
+
     btn.append(text)
 
     return btn
@@ -71,6 +84,14 @@ rows.forEach(row => {
     wrapper.append(createRow(row))
 })
 
+const changeUpperCase = () => {
+    isActiveCapsLock = !isActiveCapsLock
+
+    mainTextElems.forEach(elem => {
+        elem.innerHTML = isActiveCapsLock ? elem.innerHTML.toUpperCase() : elem.innerHTML.toLowerCase()
+    })
+}
+
 buttons.forEach(btn => {
     btn.addEventListener('mousedown', event => {
         buttons.forEach(el => {
@@ -83,7 +104,15 @@ buttons.forEach(btn => {
 
         const type = event.currentTarget.getAttribute('data-type')
 
-        const text = dataKeys[type][leng].lover
+        let text = dataKeys[type][leng].value
+
+        if (type === 'CapsLock') {
+            changeUpperCase()
+        }
+
+        if (isActiveCapsLock) {
+            text = text.toUpperCase()
+        }
 
         let start = textAria.selectionStart - (type === 'Backspace' ? 1 : 0)
         
