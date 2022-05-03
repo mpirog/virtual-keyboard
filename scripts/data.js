@@ -122,8 +122,8 @@ const dataKeys = {
         width: '100px',
         en: {
             desc: '&#8592;',
-            lover: '&#8592;',
-            upper: '&#8592;'
+            lover: '',
+            upper: ''
         }
     },
 
@@ -132,7 +132,7 @@ const dataKeys = {
         width: '80px',
         en: {
             desc: 'TAB',
-            lover: '',
+            lover: '    ',
             upper: ''
         }
     },
@@ -234,6 +234,7 @@ const dataKeys = {
     //---------------- Row 3 --------------------
     'CapsLock': {
         width: '100px',
+        isOptinal: true,
         en: {
             desc: 'Caps Lock',
             lover: '',
@@ -320,6 +321,7 @@ const dataKeys = {
     }, 
     'Enter': {
         width: '150px',
+        isOptinal: true,
         en: {
             desc: 'Enter',
             lover: '',
@@ -331,6 +333,7 @@ const dataKeys = {
 
     'ShiftLeft': {
         width: '150px',
+        isOptinal: true,
         en: {
             desc: 'Shift',
             lover: '',
@@ -412,6 +415,7 @@ const dataKeys = {
     }, 
     'ShiftRight': {
         width: '100px',
+        isOptinal: true,
         en: {
             desc: 'Shift',
             lover: '',
@@ -421,6 +425,7 @@ const dataKeys = {
     
     //---------------- Row 5 --------------------
     'ControlLeft': {
+        isOptinal: true,
         en: {
             desc: 'CTRL',
             lover: '',
@@ -428,6 +433,7 @@ const dataKeys = {
         }
     }, 
     'MetaLeft': {
+        isOptinal: true,
         en: {
             desc: 'Win',
             lover: '',
@@ -435,6 +441,7 @@ const dataKeys = {
         }
     }, 
     'AltLeft': {
+        isOptinal: true,
         en: {
             desc: 'ALT',
             lover: '',
@@ -450,6 +457,7 @@ const dataKeys = {
         }
     }, 
     'AltRight': {
+        isOptinal: true,
         en: {
             desc: 'ALT',
             lover: '',
@@ -457,6 +465,7 @@ const dataKeys = {
         }
     }, 
     'ControlRight': {
+        isOptinal: true,
         en: {
             desc: 'CTRL',
             lover: '',

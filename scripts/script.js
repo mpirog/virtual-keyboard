@@ -57,6 +57,7 @@ const createTextAria = () => {
     const textAria = document.createElement('textarea')
     textAria.setAttribute('rows', '10')
     textAria.setAttribute('cols', '125')
+    textAria.setAttribute('autofocus', '1')
     textAria.classList.add('textaria')
     
     return textAria
@@ -84,14 +85,21 @@ buttons.forEach(btn => {
 
         const text = dataKeys[type][leng].lover
 
-        const start = textAria.selectionStart
-        const end = textAria.selectionEnd
+        let start = textAria.selectionStart - (type === 'Backspace' ? 1 : 0)
+        
+        if (start < 0) {
+            start = 0
+        }
+        
+        let end = textAria.selectionEnd
         const finText = textAria.value.substring(0, start) + text + textAria.value.substring(end);
-
+        
         textAria.value = finText;
         textAria.focus();
 
-        textAria.selectionEnd = ( start == end )? (end + text.length) : end;
+        end -= (type === 'Backspace' ? 1 : 0);
+
+        textAria.selectionEnd = (start === end) ? (end + text.length) : end > 0 ? end : 0
     })
 
     btn.addEventListener('mouseup', event => {
@@ -102,6 +110,8 @@ buttons.forEach(btn => {
         ) {
             event.currentTarget.classList.remove('button__active')
         }
+
+        textAria.focus();
     })
 })
 
@@ -109,11 +119,25 @@ wrapper.prepend(textAria)
 body.append(wrapper)
 
 document.addEventListener('keydown', function(event) {
-    event.preventDefault()
+    if (!dataKeys[event.code]) {
+        return
+    }
+
+    if (!dataKeys[event.code].isOptinal) {
+        event.preventDefault()
+    }
+
     const btn = document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mousedown'))
 });
 
 document.addEventListener('keyup', function(event) {
-    event.preventDefault()
+    if (!dataKeys[event.code]) {
+        return
+    } 
+
+    if (!dataKeys[event.code].isOptinal) {
+        event.preventDefault()
+    }
+    
     const btn = document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mouseup'))
 });
