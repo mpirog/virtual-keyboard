@@ -17,6 +17,7 @@ body .textaria {
   width: 100%;
   border: 2px solid #303946;
   border-radius: 3px;
+  font-size: 24px;
 }
 
 body .wrapper {

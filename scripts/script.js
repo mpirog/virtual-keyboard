@@ -11,7 +11,7 @@ const buttons = []
 
 const body = document.querySelector('body')
 
-//---------------------------------------
+//----------------- Creations ----------------------
 
 const createButton = (type) => {
     const btn = document.createElement('div')
@@ -71,13 +71,14 @@ const createKeyboardWrapper = () => {
 
 const createTextAria = () => {    
     const textAria = document.createElement('textarea')
-    textAria.setAttribute('rows', '10')
-    textAria.setAttribute('cols', '125')
+    textAria.setAttribute('rows', '10')    
     textAria.setAttribute('autofocus', '1')
     textAria.classList.add('textaria')
     
     return textAria
 }
+
+//----------------- Actions ----------------------
 
 const changeUpperCase = (toUpper) => { 
     document.querySelectorAll('[data-main_txt]').forEach(elem => { 
@@ -162,6 +163,7 @@ const resetSelectedButtons = () => {
         }
     })
 }
+
 //--------------------- Builder --------------------------
 
 const textAria = createTextAria()
@@ -177,6 +179,7 @@ wrapper.prepend(textAria)
 body.append(wrapper)
 
 // -------------------- Listeners -----------------------
+
 buttons.forEach(btn => {
     btn.addEventListener('mousedown', event => {
         resetSelectedButtons()
@@ -246,7 +249,6 @@ buttons.forEach(btn => {
         textAria.focus();
     })
 })
-
 
 document.addEventListener('keydown', function(event) { 
     if (!dataKeys[event.code]) {
