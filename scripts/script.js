@@ -110,6 +110,46 @@ const changeTexAria = (text, type) => {
 
     end -= (type === 'Backspace' ? 1 : 0);
 
+    if (type === 'ArrowLeft') {
+        end--
+    }
+
+    if (type === 'ArrowRight') {
+        end++
+        textAria.selectionStart = end
+    }
+
+    const nextRowPos = textAria.value.substring(start).indexOf("\n")
+    const prevRowPos = textAria.value.substring(0, start).lastIndexOf("\n")
+
+    if (type === 'ArrowDown') {
+        if (nextRowPos !== -1) {
+            let nextRowPos2 = textAria.value.substring(start + nextRowPos + 1).indexOf("\n")
+
+            if (nextRowPos2 < 0) {
+                nextRowPos2 = textAria.value.length
+            } else {
+                nextRowPos2 = nextRowPos2 + start + nextRowPos
+            }
+            
+            start = start + nextRowPos + (start - prevRowPos)
+            
+            textAria.selectionStart = start > nextRowPos2 + 1 ? nextRowPos2 + 1 : start
+        }
+        
+        end = textAria.selectionStart
+    }
+    
+    if (type === 'ArrowUp') {
+        if (prevRowPos !== -1) {
+            const prevRowPos2 = textAria.value.substring(0, prevRowPos).lastIndexOf("\n")  
+            start = prevRowPos2 + (start - prevRowPos)
+            textAria.selectionStart = start > prevRowPos ? prevRowPos : start
+        }
+
+        end = textAria.selectionStart
+    }
+
     textAria.selectionEnd = (start === end) ? (end + text.length) : end > 0 ? end : 0
 }
 
@@ -208,7 +248,7 @@ buttons.forEach(btn => {
 })
 
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function(event) { 
     if (!dataKeys[event.code]) {
         return
     }

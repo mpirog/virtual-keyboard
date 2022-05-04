@@ -482,28 +482,16 @@ const dataKeys = {
         width: '150px',
         en: {
             desc: 'Enter',
-            value: "\r\n",
+            value: "\n",
         },
         ru: {
             desc: 'Enter',
-            value: "\r\n",
+            value: "\n",
         }
     }, 
     
     //---------------- Row 4 --------------------
 
-    'ShiftLeft': {
-        width: '150px',
-        isOptinal: true,
-        en: {
-            desc: 'Shift',
-            value: '',
-        },
-        ru: {
-            desc: 'Shift',
-            value: '',
-        }
-    }, 
     'KeyZ': {
         isAlfabet: true,
         en: {
@@ -618,8 +606,20 @@ const dataKeys = {
             additionalValue: ',',
         }
     }, 
+    'ShiftLeft': {
+        width: '130px',
+        isOptinal: true,
+        en: {
+            desc: 'Shift',
+            value: '',
+        },
+        ru: {
+            desc: 'Shift',
+            value: '',
+        }
+    }, 
     'ShiftRight': {
-        width: '100px',
+        width: '150px',
         isOptinal: true,
         en: {
             desc: 'Shift',
@@ -666,7 +666,7 @@ const dataKeys = {
         }
     }, 
     'Space': {
-        width: '500px',
+        width: '350px',
         isAlfabet: true,
         en: {
             desc: '________________',
@@ -676,8 +676,10 @@ const dataKeys = {
             desc: '________________',
             value: ' ',
         }
-    }, 
+    },
+
     'AltRight': {
+        width: '50px',
         isOptinal: true,
         en: {
             desc: 'ALT',
@@ -689,6 +691,7 @@ const dataKeys = {
         }
     }, 
     'ControlRight': {
+        width: '50px',
         isOptinal: true,
         en: {
             desc: 'CTRL',
@@ -699,6 +702,51 @@ const dataKeys = {
             value: '',
         }
     }, 
+
+    'ArrowUp': {
+        isOptinal: true,
+        en: {
+            desc: '&#129093;',
+            value: '',
+        },
+        ru: {
+            desc: '&#129093;',
+            value: '',
+        }
+    }, 
+    'ArrowDown': {
+        isOptinal: true,
+        en: {
+            desc: '&#129095;',
+            value: '',
+        },
+        ru: {
+            desc: '&#129095;',
+            value: '',
+        }
+    }, 
+    'ArrowRight': {
+        isOptinal: true,
+        en: {
+            desc: '&#129094;',
+            value: '',
+        },
+        ru: {
+            desc: '&#129094;',
+            value: '',
+        }
+    }, 
+    'ArrowLeft': {
+        isOptinal: true,
+        en: {
+            desc: '&#129092;',
+            value: '',
+        },
+        ru: {
+            desc: '&#129092;',
+            value: '',
+        }
+    }, 
     
 }
 
@@ -706,8 +754,8 @@ const rows = [
     ['Backquote', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0', 'Minus', 'Equal', 'Backspace'],
     ['Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash'],
     ['CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter', ],
-    ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ShiftRight', ],
-    ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ControlRight'],
+    ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ArrowUp', 'ShiftRight', ],
+    ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'],
 ]
 
 export {rows, dataKeys}
