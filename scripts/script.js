@@ -78,6 +78,30 @@ const createTextAria = () => {
     return textAria
 }
 
+const createTitle = () => {
+    const el = document.createElement('div')
+    el.classList.add('title')
+    el.innerText = 'RSS Виртуальная клавиатура';
+    return el
+}
+
+const createDescriptionText = (text) => {
+    const el = document.createElement('li')
+    el.innerText = text
+    return el
+}
+
+const createDescription = () => {
+    const conteiner = document.createElement('ul')
+    conteiner.classList.add('description')
+
+    conteiner.append(createDescriptionText('Для переключения языка комбинация: левыe ALT + Shift или Shift + ALT'))
+    conteiner.append(createDescriptionText('Для переключения языка с помощью мыши: нажмите на Shift (ALT), удерживая, переместите курсор на ALT (Shift), нажмите еще раз'))
+    conteiner.append(createDescriptionText('Для набора доп. символов с помощью мыши: нажмите на Shift, удерживая, переместите курсор на выбранную клавишу, нажмите еще раз'))
+   
+    return conteiner
+}
+
 //--------------- Actions --------------------
 
 const changeUpperCase = (toUpper) => { 
@@ -179,15 +203,17 @@ const getLocalStorage = () => {
 //----------------- Builder ---------------------
 getLocalStorage()
 
-const textAria = createTextAria()
-
 const wrapper = createKeyboardWrapper()
+
+const textAria = createTextAria()
 
 rows.forEach(row => {
     wrapper.append(createRow(row))
 })
 
 wrapper.prepend(textAria)
+wrapper.prepend(createTitle())
+wrapper.append(createDescription())
 
 body.append(wrapper)
 
