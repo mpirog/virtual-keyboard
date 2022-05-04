@@ -11,7 +11,7 @@ const buttons = []
 
 const body = document.querySelector('body')
 
-//----------------- Creations ----------------------
+//--------------- Creations -----------------
 
 const createButton = (type) => {
     const btn = document.createElement('div')
@@ -78,7 +78,7 @@ const createTextAria = () => {
     return textAria
 }
 
-//----------------- Actions ----------------------
+//--------------- Actions --------------------
 
 const changeUpperCase = (toUpper) => { 
     document.querySelectorAll('[data-main_txt]').forEach(elem => { 
@@ -164,7 +164,20 @@ const resetSelectedButtons = () => {
     })
 }
 
-//--------------------- Builder --------------------------
+//-------------- Local Storage ------------------
+
+const setLocalStorage = () => {
+    localStorage.setItem('leng', leng);
+}
+
+const getLocalStorage = () => {
+    if (localStorage.getItem('leng')) {
+        leng = localStorage.getItem('leng')
+    }
+}
+
+//----------------- Builder ---------------------
+getLocalStorage()
 
 const textAria = createTextAria()
 
@@ -178,7 +191,7 @@ wrapper.prepend(textAria)
 
 body.append(wrapper)
 
-// -------------------- Listeners -----------------------
+// ----------------- Listeners --------------------
 
 buttons.forEach(btn => {
     btn.addEventListener('mousedown', event => {
@@ -277,3 +290,5 @@ document.addEventListener('keyup', function(event) {
     
     document.querySelector(`[data-type=${event.code}]`).dispatchEvent(new Event('mouseup'))
 });
+
+window.addEventListener('beforeunload', setLocalStorage);
