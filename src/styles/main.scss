@@ -8,11 +8,34 @@ body {
     display: flex;
     flex-direction: column;
 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    .title {
+        font-size: 24px;
+        color: chocolate;
+        text-shadow: #FC0 1px 0 10px;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        
+        max-width: 800px;
+        color: rgb(53, 31, 16);
+        text-shadow: #FC0 1px 0 10px;
+        gap: 10px;
+
+        &:nth-child(n) {
+            overflow-wrap: break-word;
+        }
+    }
+
     .textaria {
         height: 200px;
         width: 100%;
-        border: 2px solid rgb(48, 57, 70);
-        border-radius: 3px;
+        border: 3px solid #aeb8c5;
+        border-radius: 10px;
+        font-size: 24px;
     }
 
     .wrapper {
@@ -52,6 +75,10 @@ body {
     
     justify-content: center;
 
+    &__alfabet {
+        background-color: rgba(0, 0, 0, 0.822);
+    }
+
     .text {
         position: relative;
         
@@ -70,13 +97,19 @@ body {
 
     &:hover {
         cursor: pointer;
+        color: #ffffff;
+        text-shadow: rgb(230, 187, 16) 1px 0 10px;
     }
     
-    transition: 1s;
+    transition: background 1s;
 
     &__active {
         background-color: aqua;
         color: rgb(30, 39, 39) !important;
         transition: 0s;
+
+        &:hover {
+            text-shadow: none;
+        }
     }
 }
