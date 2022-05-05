@@ -1,7 +1,7 @@
 const dataKeys = {
 
     //---------------- Row 1 --------------------
-    'Backquote': {
+    Backquote: {
         isAlfabet: true,
         en: {
             desc: '`',
@@ -13,8 +13,7 @@ const dataKeys = {
             value: 'ё',
         }
     },
-
-    'Digit1': {
+    Digit1: {
         isAlfabet: true,
         en: {
             desc: '1',
@@ -27,8 +26,7 @@ const dataKeys = {
             additionalValue: '!',
         }
     },
-
-    'Digit2': {
+    Digit2: {
         isAlfabet: true,
         en: {
             desc: '2',
@@ -41,7 +39,7 @@ const dataKeys = {
             additionalValue: '"',
         }
     },
-    'Digit3': {
+    Digit3: {
         isAlfabet: true,
         en: {
             desc: '3',
@@ -54,7 +52,7 @@ const dataKeys = {
             additionalValue: '№',
         }
     },
-    'Digit4': {
+    Digit4: {
         isAlfabet: true,
         en: {
             desc: '4',
@@ -67,7 +65,7 @@ const dataKeys = {
             additionalValue: ';',
         }
     },
-    'Digit5': {
+    Digit5: {
         isAlfabet: true,
         en: {
             desc: '5',
@@ -80,7 +78,7 @@ const dataKeys = {
             additionalValue: '%',
         }
     },
-    'Digit6': {
+    Digit6: {
         isAlfabet: true,
         en: {
             desc: '6',
@@ -93,7 +91,7 @@ const dataKeys = {
             additionalValue: ':',
         }
     },
-    'Digit7': {
+    Digit7: {
         isAlfabet: true,
         en: {
             desc: '7',
@@ -106,7 +104,7 @@ const dataKeys = {
             additionalValue: '?',
         }
     },
-    'Digit8': {
+    Digit8: {
         isAlfabet: true,
         en: {
             desc: '8',
@@ -119,7 +117,7 @@ const dataKeys = {
             additionalValue: '*',
         }
     },
-    'Digit9': {
+    Digit9: {
         isAlfabet: true,
         en: {
             desc: '9',
@@ -132,7 +130,7 @@ const dataKeys = {
             additionalValue: '(',
         }
     },
-    'Digit0': {
+    Digit0: {
         isAlfabet: true,
         en: {
             desc: '0',
@@ -145,7 +143,7 @@ const dataKeys = {
             additionalValue: ')',
         }
     },
-    'Minus': {
+    Minus: {
         isAlfabet: true,
         en: {
             desc: '-',
@@ -158,7 +156,7 @@ const dataKeys = {
             additionalValue: '_',
         }
     },
-    'Equal': {
+    Equal: {
         isAlfabet: true,
         en: {
             desc: '=',
@@ -171,7 +169,7 @@ const dataKeys = {
             additionalValue: '+',
         }
     },
-    'Backspace': {
+    Backspace: {
         width: '100px',
         en: {
             desc: '&#8592;',
@@ -182,9 +180,8 @@ const dataKeys = {
             value: '',
         }
     },
-
     //---------------- Row 2 --------------------
-    'Tab': {
+    Tab: {
         width: '80px',
         en: {
             desc: 'TAB',
@@ -195,7 +192,7 @@ const dataKeys = {
             value: '    ',
         }
     },
-    'KeyQ': {
+    KeyQ: {
         isAlfabet: true,
         en: {
             desc: 'q',
@@ -206,7 +203,7 @@ const dataKeys = {
             value: 'й',
         }
     }, 
-    'KeyW': {
+    KeyW: {
         isAlfabet: true,
         en: {
             desc: 'w',
@@ -217,7 +214,7 @@ const dataKeys = {
             value: 'ц',
         }
     }, 
-    'KeyE': {
+    KeyE: {
         isAlfabet: true,
         en: {
             desc: 'e',
@@ -228,7 +225,7 @@ const dataKeys = {
             value: 'у',
         }
     }, 
-    'KeyR': {
+    KeyR: {
         isAlfabet: true,
         en: {
             desc: 'r',
@@ -239,7 +236,7 @@ const dataKeys = {
             value: 'к',
         }
     }, 
-    'KeyT': {
+    KeyT: {
         isAlfabet: true,
         en: {
             desc: 't',
@@ -250,7 +247,7 @@ const dataKeys = {
             value: 'е',
         }
     }, 
-    'KeyY': {
+    KeyY: {
         isAlfabet: true,
         en: {
             desc: 'y',
@@ -261,7 +258,7 @@ const dataKeys = {
             value: 'н',
         }
     }, 
-    'KeyU': {
+    KeyU: {
         isAlfabet: true,
         en: {
             desc: 'u',
@@ -272,7 +269,7 @@ const dataKeys = {
             value: 'г',
         }
     }, 
-    'KeyI': {
+    KeyI: {
         isAlfabet: true,
         en: {
             desc: 'i',
@@ -283,7 +280,7 @@ const dataKeys = {
             value: 'ш',
         }
     }, 
-    'KeyO': {
+    KeyO: {
         isAlfabet: true,
         en: {
             desc: 'o',
@@ -294,7 +291,7 @@ const dataKeys = {
             value: 'щ',
         }
     }, 
-    'KeyP': {
+    KeyP: {
         isAlfabet: true,
         en: {
             desc: 'p',
@@ -305,7 +302,7 @@ const dataKeys = {
             value: 'з',
         }
     }, 
-    'BracketLeft': {
+    BracketLeft: {
         isAlfabet: true,
         en: {
             desc: '[',
@@ -317,7 +314,7 @@ const dataKeys = {
             value: 'х',
         }
     }, 
-    'BracketRight': {
+    BracketRight: {
         isAlfabet: true,
         en: {
             desc: ']',
@@ -329,7 +326,7 @@ const dataKeys = {
             value: 'ъ',
         }
     }, 
-    'Backslash': {
+    Backslash: {
         isAlfabet: true,
         en: {
             desc: '\\',
@@ -340,10 +337,9 @@ const dataKeys = {
             desc: '/',
             value: '/',
         }
-    },
-    
+    },    
     //---------------- Row 3 --------------------
-    'CapsLock': {
+    CapsLock: {
         width: '100px',
         isOptinal: true,
         en: {
@@ -355,7 +351,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'KeyA': {
+    KeyA: {
         isAlfabet: true,
         en: {
             desc: 'a',
@@ -366,7 +362,7 @@ const dataKeys = {
             value: 'ф',
         }
     }, 
-    'KeyS': {
+    KeyS: {
         isAlfabet: true,
         en: {
             desc: 's',
@@ -377,7 +373,7 @@ const dataKeys = {
             value: 'ы',
         }
     }, 
-    'KeyD': {
+    KeyD: {
         isAlfabet: true,
         en: {
             desc: 'd',
@@ -388,7 +384,7 @@ const dataKeys = {
             value: 'в',
         }
     }, 
-    'KeyF': {
+    KeyF: {
         isAlfabet: true,
         en: {
             desc: 'f',
@@ -399,7 +395,7 @@ const dataKeys = {
             value: 'а',
         }
     }, 
-    'KeyG': {
+    KeyG: {
         isAlfabet: true,
         en: {
             desc: 'g',
@@ -410,7 +406,7 @@ const dataKeys = {
             value: 'п',
         }
     }, 
-    'KeyH': {
+    KeyH: {
         isAlfabet: true,
         en: {
             desc: 'h',
@@ -421,7 +417,7 @@ const dataKeys = {
             value: 'р',
         }
     }, 
-    'KeyJ': {
+    KeyJ: {
         isAlfabet: true,
         en: {
             desc: 'j',
@@ -432,7 +428,7 @@ const dataKeys = {
             value: 'о',
         }
     }, 
-    'KeyK': {
+    KeyK: {
         isAlfabet: true,
         en: {
             desc: 'k',
@@ -443,7 +439,7 @@ const dataKeys = {
             value: 'л',
         }
     }, 
-    'KeyL': {
+    KeyL: {
         isAlfabet: true,
         en: {
             desc: 'l',
@@ -454,7 +450,7 @@ const dataKeys = {
             value: 'д',
         }
     }, 
-    'Semicolon': {
+    Semicolon: {
         isAlfabet: true,
         en: {
             desc: ';',
@@ -466,7 +462,7 @@ const dataKeys = {
             value: 'ж',
         }
     }, 
-    'Quote': {
+    Quote: {
         isAlfabet: true,
         en: {
             desc: '\'',
@@ -478,7 +474,7 @@ const dataKeys = {
             value: 'э',
         }
     }, 
-    'Enter': {
+    Enter: {
         width: '150px',
         en: {
             desc: 'Enter',
@@ -488,11 +484,9 @@ const dataKeys = {
             desc: 'Enter',
             value: "\n",
         }
-    }, 
-    
+    },
     //---------------- Row 4 --------------------
-
-    'KeyZ': {
+    KeyZ: {
         isAlfabet: true,
         en: {
             desc: 'z',
@@ -503,7 +497,7 @@ const dataKeys = {
             value: 'я',
         }
     }, 
-    'KeyX': {
+    KeyX: {
         isAlfabet: true,
         en: {
             desc: 'x',
@@ -514,7 +508,7 @@ const dataKeys = {
             value: 'ч',
         }
     }, 
-    'KeyC': {
+    KeyC: {
         isAlfabet: true,
         en: {
             desc: 'c',
@@ -525,7 +519,7 @@ const dataKeys = {
             value: 'с',
         }
     }, 
-    'KeyV': {
+    KeyV: {
         isAlfabet: true,
         en: {
             desc: 'v',
@@ -536,7 +530,7 @@ const dataKeys = {
             value: 'м',
         }
     }, 
-    'KeyB': {
+    KeyB: {
         isAlfabet: true,
         en: {
             desc: 'b',
@@ -547,7 +541,7 @@ const dataKeys = {
             value: 'и',
         }
     }, 
-    'KeyN': {
+    KeyN: {
         isAlfabet: true,
         en: {
             desc: 'n',
@@ -558,7 +552,7 @@ const dataKeys = {
             value: 'т',
         }
     }, 
-    'KeyM': {
+    KeyM: {
         isAlfabet: true,
         en: {
             desc: 'm',
@@ -569,7 +563,7 @@ const dataKeys = {
             value: 'ь',
         }
     }, 
-    'Comma': {
+    Comma: {
         isAlfabet: true,
         en: {
             desc: ',',
@@ -581,7 +575,7 @@ const dataKeys = {
             value: 'б',
         }
     }, 
-    'Period': {
+    Period: {
         isAlfabet: true,
         en: {
             desc: '.',
@@ -593,7 +587,7 @@ const dataKeys = {
             value: 'ю',
         }
     }, 
-    'Slash': {
+    Slash: {
         isAlfabet: true,
         en: {
             desc: '/',
@@ -606,7 +600,7 @@ const dataKeys = {
             additionalValue: ',',
         }
     }, 
-    'ShiftLeft': {
+    ShiftLeft: {
         width: '130px',
         isOptinal: true,
         en: {
@@ -618,7 +612,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'ShiftRight': {
+    ShiftRight: {
         width: '150px',
         isOptinal: true,
         en: {
@@ -630,9 +624,8 @@ const dataKeys = {
             value: '',
         }
     }, 
-    
     //---------------- Row 5 --------------------
-    'ControlLeft': {
+    ControlLeft: {
         isOptinal: true,
         en: {
             desc: 'CTRL',
@@ -643,7 +636,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'MetaLeft': {
+    MetaLeft: {
         isOptinal: true,
         en: {
             desc: 'Win',
@@ -654,7 +647,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'AltLeft': {
+    AltLeft: {
         isOptinal: true,
         en: {
             desc: 'ALT',
@@ -665,7 +658,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'Space': {
+    Space: {
         width: '350px',
         isAlfabet: true,
         en: {
@@ -677,8 +670,7 @@ const dataKeys = {
             value: ' ',
         }
     },
-
-    'AltRight': {
+    AltRight: {
         width: '50px',
         isOptinal: true,
         en: {
@@ -690,7 +682,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'ControlRight': {
+    ControlRight: {
         width: '50px',
         isOptinal: true,
         en: {
@@ -701,9 +693,8 @@ const dataKeys = {
             desc: 'CTRL',
             value: '',
         }
-    }, 
-
-    'ArrowUp': {
+    },
+    ArrowUp: {
         isOptinal: true,
         en: {
             desc: '&#129093;',
@@ -714,7 +705,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'ArrowDown': {
+    ArrowDown: {
         isOptinal: true,
         en: {
             desc: '&#129095;',
@@ -725,7 +716,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'ArrowRight': {
+    ArrowRight: {
         isOptinal: true,
         en: {
             desc: '&#129094;',
@@ -736,7 +727,7 @@ const dataKeys = {
             value: '',
         }
     }, 
-    'ArrowLeft': {
+    ArrowLeft: {
         isOptinal: true,
         en: {
             desc: '&#129092;',
@@ -746,16 +737,15 @@ const dataKeys = {
             desc: '&#129092;',
             value: '',
         }
-    }, 
-    
-}
+    }
+};
 
 const rows = [
     ['Backquote', 'Digit1', 'Digit2', 'Digit3', 'Digit4', 'Digit5', 'Digit6', 'Digit7', 'Digit8', 'Digit9', 'Digit0', 'Minus', 'Equal', 'Backspace'],
     ['Tab', 'KeyQ', 'KeyW', 'KeyE', 'KeyR', 'KeyT', 'KeyY', 'KeyU', 'KeyI', 'KeyO', 'KeyP', 'BracketLeft', 'BracketRight', 'Backslash'],
-    ['CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter', ],
-    ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ArrowUp', 'ShiftRight', ],
-    ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight'],
-]
+    ['CapsLock', 'KeyA', 'KeyS', 'KeyD', 'KeyF', 'KeyG', 'KeyH', 'KeyJ', 'KeyK', 'KeyL', 'Semicolon', 'Quote', 'Enter'],
+    ['ShiftLeft', 'KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash', 'ArrowUp', 'ShiftRight'],
+    ['ControlLeft', 'MetaLeft', 'AltLeft', 'Space', 'AltRight', 'ArrowLeft', 'ArrowDown', 'ArrowRight', 'ControlRight']
+];
 
-export {rows, dataKeys}
+export { rows, dataKeys }
