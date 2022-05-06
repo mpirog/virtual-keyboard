@@ -8,8 +8,4 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "rules": {
-        "import/extensions": "off",
-        "import/prefer-default-export": "off"
-    }
 }

@@ -1,4 +1,5 @@
-import { rows, dataKeys } from './data.js';
+import { rows, dataKeys } from './data';
+import '../styles/main.scss';
 
 let leng = 'en';
 
