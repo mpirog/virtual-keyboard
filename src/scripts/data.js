@@ -185,11 +185,11 @@ const dataKeys = {
     width: '80px',
     en: {
       desc: 'TAB',
-      value: '    ',
+      value: '\t',
     },
     ru: {
       desc: 'TAB',
-      value: '    ',
+      value: '\t',
     },
   },
   KeyQ: {
